@@ -100,3 +100,17 @@ img {
   margin: 20px auto;
   border-radius: 8px;
 }
+
+/* スマホ等狭い画面では2段に折り返す */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap; /* 折り返し許可 */
+    justify-content: center;
+  }
+
+  nav ul li a {
+    flex: 1 1 calc(50% - 12px); /* だいたい2列に収まる幅 */
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
